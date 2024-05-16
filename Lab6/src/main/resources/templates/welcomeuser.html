@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org">
+
+
+<body>
+
+
+    <p>Displaying table contents: </p>
+
+    <table>
+        <tr>
+            <th>Section_Id</th>
+            <th>Section</th>
+        </tr>
+
+        <tr th:each="section : ${allSections}">
+            <td th:text="${section.sectionId}"></td>
+            <td th:text="${section.section}"></td>
+        </tr>
+
+    </table>
+
+</body>
+</html>
